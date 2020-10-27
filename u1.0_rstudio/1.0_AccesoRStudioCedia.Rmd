@@ -1,0 +1,139 @@
+---
+title: '**R Introducción**'
+subtitle: '**Acceso a RStudio**'
+author: "Moisés Gualapuro, Cristina Ramos"
+date: "`r Sys.Date()`"
+output:
+  html_document
+---
+
+
+Moisés Gualapuro - `moises.gualapuro@ikiam.edu.ec` - Universidad Regional Amazónica IKIAM, Tena (Ecuador)
+
+Cristina Ramos - `cristina.ramos@ikiam.edu.ec` - Universidad Regional Amazónica IKIAM, Tena (Ecuador)
+
+# Acceso
+
+Para acceder a RStudio Cedia tienen que ir a: <https://rstudio.cedia.edu.ec/auth-sign-in>
+
+Luego se debe escribir el usuario y la contraseña.
+
+La **contraseña** es la misma para todos y es **r.1k14m.01**. Los **usuarios** son como se muestra en la siguiente tabla:
+
++----------------------------------------------------+---------------+
+| **NOMBRE**                                         | **USUARIO**   |
++----------------------------------------------------+---------------+
+| Jean Pierre Ramos Galarza                          | ikiam.01      |
++----------------------------------------------------+---------------+
+| Walter Armando Quilumbaquin Alba                   | ikiam.02      |
++----------------------------------------------------+---------------+
+| Juan Francisco Ponce Sánchez                       | ikiam.03      |
++----------------------------------------------------+---------------+
+| Estefania Monserrath Cabascango Chiliquinga        | ikiam.04      |
++----------------------------------------------------+---------------+
+| Sebastián Armando Bermúdez Puga                    | ikiam.05      |
++----------------------------------------------------+---------------+
+| Samy Carolina Roldan Punina                        | ikiam.06      |
++----------------------------------------------------+---------------+
+| Victor German Segarra Lindao                       | ikiam.07      |
++----------------------------------------------------+---------------+
+| Vinicio Alexander Oñate Lopez                      | ikiam.08      |
++----------------------------------------------------+---------------+
+| Jordy Daniel Infante Erazo                         | ikiam.09      |
++----------------------------------------------------+---------------+
+| Freddy Alexander Medina Bueno                      | ikiam.10      |
++----------------------------------------------------+---------------+
+| Stalin Bermudez Puga                               | ikiam.11      |
++----------------------------------------------------+---------------+
+| Alberto Alexander Robles Loaiza                    | ikiam.12      |
++----------------------------------------------------+---------------+
+| Gabriel Armando Criollo Gavidia                    | ikiam.13      |
++----------------------------------------------------+---------------+
+| Angel Tonnyno Medina Quizhpe                       | ikiam.14      |
++----------------------------------------------------+---------------+
+| Jorge Andrei Flores de Valgas Jácome               | ikiam.15      |
++----------------------------------------------------+---------------+
+| Zurita Piaún Bryan Ricardo                         | ikiam.16      |
++----------------------------------------------------+---------------+
+| Mariuxi de los Angeles Ramos Araujo                | ikiam.17      |
++----------------------------------------------------+---------------+
+| Karen Vanessa Bonilla Farinango                    | ikiam.18      |
++----------------------------------------------------+---------------+
+| Omayra Elizabeth Urbina Vasconez                   | ikiam.19      |
++----------------------------------------------------+---------------+
+| Kevin Misael Paucar Ruiz                           | ikiam.20      |
++----------------------------------------------------+---------------+
+| Heidi Dayana Rivera Vasco                          | ikiam.21      |
++----------------------------------------------------+---------------+
+| Anderson Isaac Guamán Viveros                      | ikiam.22      |
++----------------------------------------------------+---------------+
+| Joao Andrés Calle Espinoza                         | ikiam.23      |
++----------------------------------------------------+---------------+
+| Jorge Ricardo Bermeo Peñafiel                      | ikiam.24      |
++----------------------------------------------------+---------------+
+| Jaqueline Lizeth Calero Gordon                     | ikiam.25      |
++----------------------------------------------------+---------------+
+| Angie Salomé Muñoz Martínez                        | ikiam.26      |
++----------------------------------------------------+---------------+
+| Naomi Nicole Toledo Rojas                          | ikiam.27      |
++----------------------------------------------------+---------------+
+| Raúl Alejandro Quinteros Cevallos                  | ikiam.28      |
++----------------------------------------------------+---------------+
+| María José Sánchez Carvajal                        | ikiam.29      |
++----------------------------------------------------+---------------+
+| Emily Roxana Galarza Naranjo                       | ikiam.30      |
++----------------------------------------------------+---------------+
+| Juseth Enrique Chancay Sánchez                     | ikiam.31      |
++----------------------------------------------------+---------------+
+| Juan Carlos Carrera Barona                         | ikiam.32      |
++----------------------------------------------------+---------------+
+| Cielo Alexandra Montenegro Cumbanama               | ikiam.33      |
++----------------------------------------------------+---------------+
+| Mishell Carolina Ortiz Cuenca                      | ikiam.34      |
++----------------------------------------------------+---------------+
+| Jairo Wilfrido Cabrera Pino                        | ikiam.35      |
++----------------------------------------------------+---------------+
+| Gabriela Estefania Jimenez Granda                  | ikiam.36      |
++----------------------------------------------------+---------------+
+| Marcos Andrés Hidalgo Rosas                        | ikiam.37      |
++----------------------------------------------------+---------------+
+| María Samanta Oña Sierra                           | ikiam.38      |
++----------------------------------------------------+---------------+
+| Pablo Fernando Sarango Hidalgo                     | ikiam.39      |
++----------------------------------------------------+---------------+
+| Danilo Rafael Iturralde Guamán                     | ikiam.40      |
++----------------------------------------------------+---------------+
+| Arnoldd Rodrigo Hernández Hurtado                  | ikiam.41      |
++----------------------------------------------------+---------------+
+| Luis Fernando Zambrano Mite                        | ikiam.42      |
++----------------------------------------------------+---------------+
+| Kevin Armando Castro Cuichan                       | ikiam.43      |
++----------------------------------------------------+---------------+
+| Luis Carlos Carrasco Soledispa                     | ikiam.44      |
++----------------------------------------------------+---------------+
+| Gabriela Nicole Encarnación Vera                   | ikiam.45      |
++----------------------------------------------------+---------------+
+| Walter Isac Moposita Moposita                      | ikiam.46      |
++----------------------------------------------------+---------------+
+| Borys Alexander León Alcívar                       | ikiam.47      |
++----------------------------------------------------+---------------+
+| Angélica María Navarrete Vega                      | ikiam.48      |
++----------------------------------------------------+---------------+
+| Andrea Estefania Llumiquinga Suntaxi               | ikiam.49      |
++----------------------------------------------------+---------------+
+| Alexander David Gualli Jaramillo                   | ikiam.50      |
++----------------------------------------------------+---------------+
+| Angel Andrés Ojeda Montesdeoca                     | ikiam.51      |
++----------------------------------------------------+---------------+
+
+: Usuarios de RStudio Cedia
+
+
+```{r, out.width='80%', fig.align='center', fig.cap='Página web para acceder a RStudio Cedia'}
+knitr::include_graphics('./img/rstudiocedia.png')
+```
+
+```{r, out.width='80%', fig.align='center', fig.cap='Ventana de RStudio Cedia'}
+knitr::include_graphics('./img/rstudiocedia1.png')
+```
+

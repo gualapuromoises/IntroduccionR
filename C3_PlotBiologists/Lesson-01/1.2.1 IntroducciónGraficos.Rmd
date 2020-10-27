@@ -1,0 +1,113 @@
+---
+output:
+  beamer_presentation:
+    theme: "Madrid"
+    colortheme: "beaver"
+    fonttheme: "structurebold"
+    fig_width: 6
+    fig_height: 3
+    fig_caption: true
+    
+title: "1.3.1 GRÁFICOS DE FUNCIONES"
+institute: "R4HPC-IKIAM"
+author: "Moisés Gualapuro"
+date: October 05, 2020
+fontsize: 10
+---
+
+# CONTENIDO
+
+- Leer data
+- Realizar un gráfico rápido
+- Guardar una gráfica en diferentes formatos (.png, .jpg, .pdf, and .tiff)
+
+
+# LEER DATA
+**Pasos para leer la data**
+
+- Ir a la sección de Packages" y hacer click en **Install**, escribir **ggplot2** y aplastar en **Install**.
+- Ir a la sección **Files** buscar la carpeta que corresponda, ir a "More", seleccionar **Set As Working Directory**.
+- Definir el nombre del archivo a cargar.
+- Leer el archivo en un dataframe
+
+```{r}
+library(ggplot2)
+filename <- "Encode_HMM_data.txt"
+df <- read.csv(filename, sep="\t", header=FALSE)
+
+```
+
+- Si la lectura del archivo muestra error, se debe defiir adecuadamente el **Set As Working Directory**.
+
+# REVISAR DATA
+- Revisar las primeras filas
+```{r}
+head(df, 2)
+```
+
+- Revisar las últimas filas
+```{r}
+tail(df, 2)
+```
+# REVISAR EL TIPO DE CONTENIDO EN LA DATA
+- Revisar los tipos de variable.
+```{r}
+str(df)
+```
+
+# NOMBRAR COLUMNAS
+Este archivo en particular, no tiene nombres de las columnas, por ello se requiere generar los nombres de las mismas. 
+```{r}
+names(df)[1:4] <- c("chrom","start","stop","type")
+head(df, 2)
+```
+
+# GRÁFICA RÁPIDA 
+```{r}
+plot0 <- ggplot(df, aes(x=chrom,fill=type)) + geom_bar() +
+  theme(legend.text = element_text(colour="blue", size = 8)) +
+  guides(fill=guide_legend(ncol=2), title = "Tipo de genes") +
+  labs(title = "Número de genes en cada cromosoma", 
+       x = "Cromosomas", y = "Número de genes") +
+  theme(axis.text.x = element_text(angle = 90, 
+                                   vjust = 0.5, hjust=1))
+  
+
+```
+# MOSTRAR GRÁFICA 
+```{r}
+plot0
+```
+
+
+# GUARDAR FIGURA EN .png, .tiff, .jpg
+```{r}
+
+png("plot.png")
+plot0
+dev.off()
+
+tiff("plot.tiff")
+plot0
+dev.off()
+
+jpeg("plot.jpg")
+plot0
+dev.off()
+```
+
+# GUARDAR FIGURA EN .pdf, .png HD
+```{r}
+
+pdf("plot.pdf")
+plot0
+dev.off()
+
+# High-resolution:
+png("plot_hi_res.png",1000,1000)
+plot0
+dev.off()
+
+```
+
+

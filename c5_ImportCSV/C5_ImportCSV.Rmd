@@ -1,0 +1,66 @@
+---
+title: "C5_ImportSCV"
+author: "MoisesG"
+date: "17/9/2020"
+output: html_document
+---
+# Importar y explorar
+
+```{r setup, include=TRUE}
+# Importar data contenido en el archivo csv
+df = read.csv(file = "cancerData1.csv", header = TRUE, sep=",")
+str(df) # tipos de datos de df
+head(df, 4) # mostrar las 4 primeras filas
+tail(df, 4) # mostrar las 4 últimas filas
+df[4,] # mostrar la fila 4
+df[,4] # mostrar la columna 4
+df[3,5] # mostrar la celda en la fila 3 y columna 5
+df[1:5,] # mostrar todas las columnas de las filas 1 al 5 
+df[,2:4] # mostrar todas las filas de las columnas 2 al 4
+head(df[,2:5],3) # mostrar las tres primeras filas de las columnas 2 al 5
+dim(df) # conocer la dimensiones de la matriz filas * columnas
+df[, "gender"] # seleccionar la columna "gender"
+gender <- df[, "gender"] # guardar el dato de "gender" en una variable
+str(gender) # ver el tipo de dato de "gender"
+gender <- as.factor(gender) # dado que el género es masculino o femenino se cambia el tipo de dato a factor
+str(gender) # revisar el tipo de dato de "gender"
+bmi <- df[,"bmi"] # seleccionar columna "bmi" y asignar una variable
+summary(bmi) # "bmi" es continuo, sacar resumen de estadísticas básicas
+summary(df$bmi) # forma alternativa de sacar el resumen de estadísticas
+fruitveg <- df[, c("fruit","veg")] # seleccionar dos columnas
+table(fruitveg) # tabla con conteos 
+hist(fruitveg$fruit) # histograma de veces que consumen frutas
+hist(fruitveg$veg) # histograma de veces que consumen vegetales
+hist(fruitveg$fruit+fruitveg$veg) # histograma de veces que consumen frutas y vegetales
+df["fruitveg"] = df$fruit+df$veg # crear nueva columna operando columnas
+hist(df$fruitveg) # forma dos de mostrar histogrma de consumo de frutas y vegetales
+table(df$smoking) # Contar frecuencias por tipo de "smoking"
+table(df$smoking, exclude = NULL) # explicitar que se identifique los campos vacíos
+df$five_a_day <- ifelse(df$fruitveg >= 5, 1, 0) # Categorizar si comen o no 5 veces al día las frutas y vegetales
+as.factor(df$five_a_day) # transformar la variable "five_a_day" a tipo factor 
+table(df$five_a_day) # contar por tipo de "five_a_day"
+
+hist(df$fruitveg, main="Consumo diario de frutas y vegetales combinados", 
+     xlab = "Número de porciones de frutas y vegetales consumidas por día", 
+     ylab = "Frecuencia")
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
